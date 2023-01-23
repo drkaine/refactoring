@@ -6,3 +6,7 @@ Refactorisez les codes en expliquant votre résonnement en commentaire (2 jours)
 - 1 exo SCSS
 
 PS : nous ne cherchons pas le code parfait, nous voulons évaluer votre capacité à réfléchir et solutionner un problème
+
+
+# Solution proposé
+Fait en php 8.1.12 avec phpUnit 9.4.4
