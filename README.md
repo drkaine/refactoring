@@ -10,3 +10,5 @@ PS : nous ne cherchons pas le code parfait, nous voulons évaluer votre capacit�
 
 # Solution proposé
 Fait en php 8.1.12 avec phpUnit 9.4.4
+
+Le résultat du refactoring est dans le fichier source et les explications sont dans le fichier *-old.*

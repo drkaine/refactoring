@@ -1,25 +1,30 @@
 /* Footer */
+
+@mixin theme($text-shadow-color : #15FFF5) {
+  text-shadow: 0.55rem 0.55rem $text-shadow-color;
+}
+
 #footer {
-  text-shadow: 0.55rem 0.55rem #FFFFFF;
-}
+  @include theme($text-shadow-color : #FFFFFF);
 
-#footer .form__footer {
-  margin: 1rem;
-  text-shadow: 0.55rem 0.55rem #15FFF5;
-}
+  .form__footer {
+    margin: 1rem;
+    @include theme;
+  }
 
-#footer .cgv__footer {
-  margin: 0.5rem;
-  text-shadow: 0.55rem 0.55rem #15FFF5;
-}
+  .cgv__footer {
+    margin: 0.5rem;
+    @include theme;
+    
+    .button {
+      margin: 1rem;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+  } 
 
-#footer .cgv__footer .button {
-  margin: 1rem;
-  padding: 1rem;
-  font-size: 1.5rem;
-}
-
-#footer .cgu__footer {
-  margin: 0.5rem;
-  text-shadow: 0.55rem 0.55rem #15FFF5;
+  .cgu__footer {
+    margin: 0.5rem;
+    @include theme;
+  }
 }
