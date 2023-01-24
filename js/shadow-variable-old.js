@@ -1,14 +1,20 @@
 const articleList = []; // In a real app this list would be full of articles.
-let kudos = 5;
+
+// J'ai remplacé les var par des let pour respecter les nouvelles conventions,
+// Les bonnes pratiques et éviter les problèmes liés à la portée
+
+var kudos = 5;
+
+// J'ai renommé le var kudos de la fonction en totalKudos pour éviter la confusion
 
 function calculateTotalKudos(articles) {
-  let totalKudos = 0;
+  var kudos = 0;
   
   for (let article of articles) {
-    totalKudos += article.kudos;
+    kudos += article.kudos;
   }
   
-  return totalKudos;
+  return kudos;
 }
 
 document.write(`
