@@ -1,5 +1,7 @@
 <?php
 
-define('CHILDREN', 2);
-define('REGULAR', 0);
-define('NEW_RELEASE', 1);
+return [
+    'REGULAR' => 0,
+    'NEW_RELEASE' => 1,
+    'CHILDREN' => 2,
+];
