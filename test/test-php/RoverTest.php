@@ -12,7 +12,7 @@ class RoverTest extends TestCase
   public function setUp() :void
   {
       parent::setUp();
-      $this->rover = new Rover(3, 3, "N");
+      $this->rover = new Rover(3, 3, 'N');
   }
 
   public function testPlayCommandsSequence(): void {
@@ -24,7 +24,7 @@ class RoverTest extends TestCase
   }
 
   public function testPlayCommandsSequenceFalse(): void {
-    $rover = new Rover(3, 3, "l");
+    $rover = new Rover(3, 3, 'l');
     $this->assertEquals(false, $rover->playCommandsSequence('opkjn'));
   }
 }

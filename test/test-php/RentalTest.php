@@ -15,7 +15,7 @@ class RentalTest extends TestCase
   public function setUp() :void
   {
       parent::setUp();
-      $this->movie = new Movie('Titre film', 35);
+      $this->movie = new Movie('Titre film', 2);
       $this->rental = new Rental($this->movie, 3);
   }
 

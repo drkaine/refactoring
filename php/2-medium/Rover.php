@@ -54,7 +54,7 @@ class Rover
         } else if ($this->direction === 'W') {
             $this->coordinateX -= $displacement;
             return true;
-        } else if($this->direction === "E"){
+        } else if($this->direction === 'E'){
             $this->coordinateX += $displacement;
             return true;
         }

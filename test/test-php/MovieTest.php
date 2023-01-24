@@ -12,16 +12,16 @@ class MovieTest extends TestCase
   public function setUp() :void
   {
       parent::setUp();
-      $this->movie = new Movie('Titre film', 35);
+      $this->movie = new Movie('Titre film', 2);
   }
 
   public function testGetPriceCode(): void {
-      $this->assertEquals(35, $this->movie->getPriceCode());
+      $this->assertEquals(2, $this->movie->getPriceCode());
   }
 
   public function testSetPriceCode(): void {
-    $this->movie->setPriceCode(305);
-    $this->assertEquals(305, $this->movie->getPriceCode());
+    $this->movie->setPriceCode(0);
+    $this->assertEquals(0, $this->movie->getPriceCode());
   }
 
   public function testGetTitle(): void {
