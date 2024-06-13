@@ -2,13 +2,12 @@
 
 declare(strict_types=1);
 
+
 namespace App;
+
 
 class Rental
 {
-    private Movie $movie;
-    private int $daysRented;
-
     public function __construct(Movie $movie, int $daysRented)
     {
         $this->movie = $movie;
@@ -24,4 +23,7 @@ class Rental
     {
         return $this->movie;
     }
+
+    private Movie $movie;
+    private int $daysRented;
 }

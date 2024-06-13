@@ -6,14 +6,3 @@ Refactorisez les codes en expliquant votre résonnement en commentaire (2 jours)
 - 1 exo SCSS
 
 PS : nous ne cherchons pas le code parfait, nous voulons évaluer votre capacité à réfléchir et solutionner un problème
-
-
-# Solution proposé
-Fait en php 8.1.12 avec phpUnit 9.4.4
-
-Le résultat du refactoring est dans le fichier source et les explications sont dans le fichier *-old.*
-
-Ajout des tests unitaires en php dans un dossier test\test-php
-
-Si il y avait eu plus de fonctions en javascript j'aurai pût rajouter des tests unitaires pour ce langage avec
-par exemple mocha.js

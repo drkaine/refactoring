@@ -2,10 +2,16 @@
 
 declare(strict_types=1);
 
+
 namespace App;
+
 
 class Movie
 {
+    public const CHILDREN = 2;
+    public const REGULAR = 0;
+    public const NEW_RELEASE = 1;
+
     private string $title;
     private int $priceCode;
 
@@ -20,9 +26,9 @@ class Movie
         return $this->priceCode;
     }
 
-    public function setPriceCode(int $priceCode)
+    public function setPriceCode(int $code)
     {
-        return $this->priceCode = $priceCode;
+        return $this->priceCode = $code;
     }
 
     public function getTitle(): string

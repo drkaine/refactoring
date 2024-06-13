@@ -1,14 +1,14 @@
 const articleList = []; // In a real app this list would be full of articles.
-let kudos = 5;
+var kudos = 5;
 
 function calculateTotalKudos(articles) {
-  let totalKudos = 0;
+  var kudos = 0;
   
   for (let article of articles) {
-    totalKudos += article.kudos;
+    kudos += article.kudos;
   }
   
-  return totalKudos;
+  return kudos;
 }
 
 document.write(`

@@ -1,20 +1,59 @@
 <?php
 
-require('config-magic-variable.php');
+function convertSize($bytes, $precision = 2) {
+  $kilobytes = $bytes / 1024;
 
-function convertBytesSize(float $bytes, int $roundNumberPrecision = 2): string {
-  return getBytesSize($bytes, $roundNumberPrecision);
-}
-
-function getBytesSize(float $bytes, int $roundNumberPrecision): string {
-  foreach(constant('listOfSize') as $size) {
-    
-    if($bytes < constant('sizeLimitForConversion')) {
-      return round($bytes, $roundNumberPrecision) . $size;
-    }
-
-    $bytes /= constant('sizeLimitForConversion');
+  if ($kilobytes < 1024) {
+    return round($bytes, $precision) . ' KB';
   }
 
-  return round($bytes, $roundNumberPrecision) . array_pop(constant('listOfSize'));
+  $megabytes = $kilobytes / 1024;
+
+  if ($megabytes < 1024) {
+    return round($megabytes, $precision) . ' MB';
+  }
+
+  $gigabytes = $megabytes / 1024;
+
+  if ($gigabytes < 1024) {
+    return round($gigabytes, $precision) . ' GB';
+  }
+
+  $terabytes = $gigabytes / 1024;
+
+  if ($terabytes < 1024) {
+    return round($terabytes, $precision) . ' TB';
+  }
+
+  $petabytes = $terabytes / 1024;
+
+  if ($petabytes < 1024) {
+    return round($petabytes, $precision) . ' TB';
+  }
+
+  $exabytes = $petabytes / 1024;
+
+  if ($exabytes < 1024) {
+    return round($exabytes, $precision) . ' EB';
+  }
+
+  $zettabytes = $exabytes / 1024;
+
+  if ($zettabytes < 1024) {
+    return round($zettabytes, $precision) . ' ZB';
+  }
+
+  $yottabytes = $zettabytes / 1024;
+
+  if ($yottabytes < 1024) {
+    return round($yottabytes, $precision) . ' ZB';
+  }
+
+  $hellabyte = $yottabytes / 1024;
+
+  if ($hellabyte < 1024) {
+    return round($hellabyte, $precision) . ' HB';
+  }
+  
+  return $bytes . ' B';
 }
